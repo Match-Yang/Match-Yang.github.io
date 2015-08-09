@@ -77,6 +77,87 @@
         <header class="article-info clearfix">
   <h1 itemprop="name">
     
+      <a href="/2015/08/09/Qt-Style-Sheets-简介/" title="Qt Style Sheets--简介" itemprop="url">Qt Style Sheets--简介</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Match" target="_blank" itemprop="author">Match</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-09T15:45:42.000Z" itemprop="datePublished"> 发表于 2015-08-09</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h1 id="Qt_Style_Sheets—简介">Qt Style Sheets—简介</h1><p>(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)<br>&emsp;&emsp;Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。<br>&emsp;&emsp;Qt样式表的概念、术语、语法都深受HTML启发Cascading Style Sheets (CSS)但是却适合于widgets的世界。</p>
+<hr>
+<h2 id="专题">专题</h2><ul>
+<li>概述</li>
+<li>Qt设计师集成开发工具（以后不对这个模块做描述，大家有兴趣的自己看看帮助文档）</li>
+<li>使用样式表自定义Qt Widgets</li>
+<li>Qt样式表标准</li>
+<li>Qt样式表例子</li>
+</ul>
+<hr>
+<h2 id="概述">概述</h2><p>&emsp;&emsp;样式表是一种能使用 <strong>QApplication::setStyleSheet()</strong>设置到整个应用程序或者使用<strong>QWidget::setStyleSheet()</strong>设置到某个特定的部件（包括其子部件）的文本规范。如果在几个不同的级别上设置了不同的样式表，Qt会同时应用这几个级别上设置的所有样式表，这就是所谓的级联。<br>&emsp;&emsp;举个例子，下面的样式表语句规定所有的<strong>QLineEdit</strong>都应该将黄色作为它们的背景样色，同样的，所有的<strong>QCheckBox</strong>都应该将红色作为该部件上字体的颜色:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">QLineEdit</span> <span class="rules">&#123; <span class="rule"><span class="attribute">background</span>:<span class="value"> yellow &#125;</span><br><span class="line">QCheckBox &#123; color: red &#125;</span></span></span></span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;对于这种定制，样式表比<strong>QPalette</strong>要强大得多。举个例子，通过设置<strong>QPalette::Button</strong>的<strong>role</strong>成红色以获得一个红色的按钮看似非常有诱惑力，然而,这并不能保证适用于所有风格,因为样式作者会受限于不同平台的指导方针和(在 Windows XP 和 Mac OS X)本地的主题引擎。<br>&emsp;&emsp;此外，样式表可以在你不子类化<strong>QStyle</strong>的情况下也能为你的应用程序提供独特的观感。举个例子，你可以为单选框和复选框指定任意的图片以使它们更加的突出。使用这种技术，还可以实现更小的定制，但这通常需要子类化一下style类，比如style hint。下面展示的两个独特的样式表，你可以尝试和修改。</p>
+<p><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtmsduhij20or0dj427.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtrjhm8aj20oo0dgwhc.jpg" alt=""></p>
+<p>&emsp;&emsp;样式表让你可以执行任何<strong>QPalette</strong>难以做到甚至不能做到的各种自定义操作。 如果你想让必填字段显示黄色的背景色、让退出按钮等破坏性的按钮显示红色的文字有或者想弄个花里胡哨的复选框，那么样式表都能满足你。</p>
+<p>&emsp;&emsp;样式表应用在所有部件的顶层，这意味着你的应用程序看起来会像本地的样式，但是任何样式表定义都会被考虑。与palette那种不靠谱相反，样式表能保证：如果你把<strong>QPushButton</strong>的背景色设置成了红色，你可以确定在所有平台和主题下它的背景颜色都是红色的。此外，Qt 设计师工具提供了样式表的集成，可以更直观的看到样式表的效果。</p>
+<p>&emsp;&emsp;当样式表激活时，由<strong>QWidget::style()</strong>返回的QStyle其实是“样式表”的包装而不是平台指定的样式。“样式表”的包装保证样式表会优先使用，否则在进行绘制操作时，平台指定的样式将会生效。（例子：Windows XP上使用QWindowsXPStyle）</p>
+<hr>
+<p>版权声明：本文为博主原创文章，欢迎转载，转载请注明出处</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/开发/">开发</a>►<a class="article-category-link" href="/categories/开发/Qt/">Qt</a>►<a class="article-category-link" href="/categories/开发/Qt/笔记/">笔记</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/qss/">qss</a><a href="/tags/qt/">qt</a><a href="/tags/前端/">前端</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/08/09/Qt-Style-Sheets-简介/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/09/Qt-Style-Sheets-简介/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
       <a href="/2015/07/30/hello-world/" title="Hello World" itemprop="url">Hello World</a>
   </h1>
   <p class="article-author">By
@@ -213,6 +294,18 @@
 		<ul>
 		
 		  
+			<li><a href="/categories/开发/Qt/" title="Qt">Qt<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/开发/" title="开发">开发<sup>1</sup></a></li>
+		  
+		
+		  
+			<li><a href="/categories/开发/Qt/笔记/" title="笔记">笔记<sup>1</sup></a></li>
+		  
+		
+		  
 			<li><a href="/categories/笔记/" title="笔记">笔记<sup>1</sup></a></li>
 		  
 		
@@ -226,13 +319,23 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>1</sup></a></li>
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/qt/" title="qt">qt<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/qss/" title="qss">qss<sup>1</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/前端/" title="前端">前端<sup>1</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/系统/" title="系统">系统<sup>1</sup></a></li>
-			
-		
 			
 		
 		</ul>

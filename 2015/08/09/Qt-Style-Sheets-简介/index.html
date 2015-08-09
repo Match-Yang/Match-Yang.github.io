@@ -4,26 +4,25 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Hello World | 写代码的火柴</title>
+    <title>Qt Style Sheets--简介 | 写代码的火柴</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Match">
     
 
     
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+    <meta name="description" content="Qt Style Sheets—简介(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)&amp;emsp;&amp;emsp;Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。&amp;emsp;&amp;emsp;Qt样式表的概念、术语、语法都深受HTML启发Cascading Styl">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://wanqingyang.me/2015/07/30/hello-world/index.html">
+<meta property="og:title" content="Qt Style Sheets--简介">
+<meta property="og:url" content="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-简介/index.html">
 <meta property="og:site_name" content="写代码的火柴">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
-<meta property="og:updated_time" content="2015-07-29T17:19:31.000Z">
+<meta property="og:description" content="Qt Style Sheets—简介(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)&amp;emsp;&amp;emsp;Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。&amp;emsp;&amp;emsp;Qt样式表的概念、术语、语法都深受HTML启发Cascading Styl">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtmsduhij20or0dj427.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtrjhm8aj20oo0dgwhc.jpg">
+<meta property="og:updated_time" content="2015-08-09T16:37:39.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub.
-Quick">
+<meta name="twitter:title" content="Qt Style Sheets--简介">
+<meta name="twitter:description" content="Qt Style Sheets—简介(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)&amp;emsp;&amp;emsp;Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。&amp;emsp;&amp;emsp;Qt样式表的概念、术语、语法都深受HTML启发Cascading Styl">
 
     
     <link rel="alternative" href="/atom.xml" title="写代码的火柴" type="application/atom+xml">
@@ -79,14 +78,14 @@ Quick">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/07/30/hello-world/" title="Hello World" itemprop="url">Hello World</a>
+      <a href="/2015/08/09/Qt-Style-Sheets-简介/" title="Qt Style Sheets--简介" itemprop="url">Qt Style Sheets--简介</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Match" target="_blank" itemprop="author">Match</a>
 		
   <p class="article-time">
-    <time datetime="2015-07-29T17:19:31.000Z" itemprop="datePublished"> 发表于 2015-07-30</time>
+    <time datetime="2015-08-09T15:45:42.000Z" itemprop="datePublished"> 发表于 2015-08-09</time>
     
   </p>
 </header>
@@ -95,24 +94,44 @@ Quick">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_hexo_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run hexo server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Qt_Style_Sheets—简介"><span class="toc-number">1.</span> <span class="toc-text">Qt Style Sheets—简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#专题"><span class="toc-number">1.1.</span> <span class="toc-text">专题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.2.</span> <span class="toc-text">概述</span></a></li></ol></li></ol>
 		
 		</div>
 		
-		<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
-<h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
-<h3 id="Run_hexo_server">Run hexo server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
-<h3 id="Generate_static_files">Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
-<h3 id="Deploy_to_remote_sites">Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+		<h1 id="Qt_Style_Sheets—简介">Qt Style Sheets—简介</h1><p>(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)<br>&emsp;&emsp;Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。<br>&emsp;&emsp;Qt样式表的概念、术语、语法都深受HTML启发Cascading Style Sheets (CSS)但是却适合于widgets的世界。</p>
+<hr>
+<h2 id="专题">专题</h2><ul>
+<li>概述</li>
+<li>Qt设计师集成开发工具（以后不对这个模块做描述，大家有兴趣的自己看看帮助文档）</li>
+<li>使用样式表自定义Qt Widgets</li>
+<li>Qt样式表标准</li>
+<li>Qt样式表例子</li>
+</ul>
+<hr>
+<h2 id="概述">概述</h2><p>&emsp;&emsp;样式表是一种能使用 <strong>QApplication::setStyleSheet()</strong>设置到整个应用程序或者使用<strong>QWidget::setStyleSheet()</strong>设置到某个特定的部件（包括其子部件）的文本规范。如果在几个不同的级别上设置了不同的样式表，Qt会同时应用这几个级别上设置的所有样式表，这就是所谓的级联。<br>&emsp;&emsp;举个例子，下面的样式表语句规定所有的<strong>QLineEdit</strong>都应该将黄色作为它们的背景样色，同样的，所有的<strong>QCheckBox</strong>都应该将红色作为该部件上字体的颜色:</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">QLineEdit</span> <span class="rules">&#123; <span class="rule"><span class="attribute">background</span>:<span class="value"> yellow &#125;</span><br><span class="line">QCheckBox &#123; color: red &#125;</span></span></span></span><br></pre></td></tr></table></figure>
+<p>&emsp;&emsp;对于这种定制，样式表比<strong>QPalette</strong>要强大得多。举个例子，通过设置<strong>QPalette::Button</strong>的<strong>role</strong>成红色以获得一个红色的按钮看似非常有诱惑力，然而,这并不能保证适用于所有风格,因为样式作者会受限于不同平台的指导方针和(在 Windows XP 和 Mac OS X)本地的主题引擎。<br>&emsp;&emsp;此外，样式表可以在你不子类化<strong>QStyle</strong>的情况下也能为你的应用程序提供独特的观感。举个例子，你可以为单选框和复选框指定任意的图片以使它们更加的突出。使用这种技术，还可以实现更小的定制，但这通常需要子类化一下style类，比如style hint。下面展示的两个独特的样式表，你可以尝试和修改。</p>
+<p><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtmsduhij20or0dj427.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtrjhm8aj20oo0dgwhc.jpg" alt=""></p>
+<p>&emsp;&emsp;样式表让你可以执行任何<strong>QPalette</strong>难以做到甚至不能做到的各种自定义操作。 如果你想让必填字段显示黄色的背景色、让退出按钮等破坏性的按钮显示红色的文字有或者想弄个花里胡哨的复选框，那么样式表都能满足你。</p>
+<p>&emsp;&emsp;样式表应用在所有部件的顶层，这意味着你的应用程序看起来会像本地的样式，但是任何样式表定义都会被考虑。与palette那种不靠谱相反，样式表能保证：如果你把<strong>QPushButton</strong>的背景色设置成了红色，你可以确定在所有平台和主题下它的背景颜色都是红色的。此外，Qt 设计师工具提供了样式表的集成，可以更直观的看到样式表的效果。</p>
+<p>&emsp;&emsp;当样式表激活时，由<strong>QWidget::style()</strong>返回的QStyle其实是“样式表”的包装而不是平台指定的样式。“样式表”的包装保证样式表会优先使用，否则在进行绘制操作时，平台指定的样式将会生效。（例子：Windows XP上使用QWindowsXPStyle）</p>
+<hr>
+<p>版权声明：本文为博主原创文章，欢迎转载，转载请注明出处</p>
   
 	</div>
 		<footer class="article-footer clearfix">
 <div class="article-catetags">
 
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/开发/">开发</a>►<a class="article-category-link" href="/categories/开发/Qt/">Qt</a>►<a class="article-category-link" href="/categories/开发/Qt/笔记/">笔记</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/qss/">qss</a><a href="/tags/qt/">qt</a><a href="/tags/前端/">前端</a>
+  </div>
 
 </div>
 
@@ -120,7 +139,7 @@ Quick">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://wanqingyang.me/2015/07/30/hello-world/" data-title="Hello World | 写代码的火柴" data-tsina="MatchYangWanQing" class="share clearfix">
+	  <div data-url="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-简介/" data-title="Qt Style Sheets--简介 | 写代码的火柴" data-tsina="MatchYangWanQing" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -133,19 +152,11 @@ Quick">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/08/09/Qt-Style-Sheets-简介/" title="Qt Style Sheets--简介">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Qt Style Sheets--简介</span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2013/05/15/Ubuntu单网卡绑定多IP/"  title="Ubuntu单网卡绑定多IP">
+<a href="/2015/07/30/hello-world/"  title="Hello World">
  <strong>下一篇：</strong><br/> 
- <span>Ubuntu单网卡绑定多IP
+ <span>Hello World
 </span>
 </a>
 </div>
@@ -154,7 +165,7 @@ Quick">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/07/30/hello-world/" data-title="Hello World" data-url="http://wanqingyang.me/2015/07/30/hello-world/"></div>
+	<div class="ds-thread" data-thread-key="2015/08/09/Qt-Style-Sheets-简介/" data-title="Qt Style Sheets--简介" data-url="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-简介/"></div>
 </section>
 
 
@@ -164,7 +175,7 @@ Quick">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick_Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create_a_new_post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run_hexo_server"><span class="toc-number">1.2.</span> <span class="toc-text">Run hexo server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate_static_files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy_to_remote_sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Qt_Style_Sheets—简介"><span class="toc-number">1.</span> <span class="toc-text">Qt Style Sheets—简介</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#专题"><span class="toc-number">1.1.</span> <span class="toc-text">专题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">1.2.</span> <span class="toc-text">概述</span></a></li></ol></li></ol>
  
   </div>
 
