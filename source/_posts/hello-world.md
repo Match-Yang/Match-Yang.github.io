@@ -12,7 +12,7 @@ $ hexo new "My New Post"
 
 More info: [Writing](http://hexo.io/docs/writing.html)
 
-### Run server
+### Run hexo server
 
 ``` bash
 $ hexo server
