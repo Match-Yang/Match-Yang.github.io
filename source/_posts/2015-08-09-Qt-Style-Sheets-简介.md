@@ -35,4 +35,4 @@ QCheckBox { color: red }
 
 &emsp;&emsp;当样式表激活时，由**QWidget::style()**返回的QStyle其实是“样式表”的包装而不是平台指定的样式。“样式表”的包装保证样式表会优先使用，否则在进行绘制操作时，平台指定的样式将会生效。（例子：Windows XP上使用QWindowsXPStyle）
 - - -
-版权声明：本文为博主原创文章，欢迎转载，转载请注明出处
+版权声明：[本文](http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-%E7%AE%80%E4%BB%8B/)为博主原创文章，欢迎转载，转载请注明出处
