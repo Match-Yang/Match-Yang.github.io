@@ -27,7 +27,7 @@ Qt设">
 Qt设">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtmsduhij20or0dj427.jpg">
 <meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtrjhm8aj20oo0dgwhc.jpg">
-<meta property="og:updated_time" content="2015-08-10T14:11:34.000Z">
+<meta property="og:updated_time" content="2015-08-16T05:09:57.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Qt Style Sheets--简介">
 <meta name="twitter:description" content="(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。Qt样式表的概念、术语、语法都深受HTML启发Cascading Style Sheets (CSS)但是却适合于widgets的世界。
@@ -128,7 +128,7 @@ Qt设">
 <p>&emsp;&emsp;样式表应用在所有部件的顶层，这意味着你的应用程序看起来会像本地的样式，但是任何样式表定义都会被考虑。与palette那种不靠谱相反，样式表能保证：如果你把<strong>QPushButton</strong>的背景色设置成了红色，你可以确定在所有平台和主题下它的背景颜色都是红色的。此外，Qt 设计师工具提供了样式表的集成，可以更直观的看到样式表的效果。</p>
 <p>&emsp;&emsp;当样式表激活时，由<strong>QWidget::style()</strong>返回的QStyle其实是“样式表”的包装而不是平台指定的样式。“样式表”的包装保证样式表会优先使用，否则在进行绘制操作时，平台指定的样式将会生效。（例子：Windows XP上使用QWindowsXPStyle）</p>
 <hr>
-<p>版权声明：本文为博主原创文章，欢迎转载，转载请注明出处</p>
+<p>版权声明：<a href="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-%E7%AE%80%E4%BB%8B/">本文</a>为博主原创文章，欢迎转载，转载请注明出处</p>
   
 	</div>
 		<footer class="article-footer clearfix">
