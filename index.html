@@ -73,6 +73,80 @@
 
    
     
+    <article class="post-expand 让qt" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/18/Creator编译更快/" title="Qt Creator编译更快" itemprop="url">Qt Creator编译更快</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Match" target="_blank" itemprop="author">Match</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-18T15:52:51.000Z" itemprop="datePublished"> 发表于 2015-08-18</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="有啥用">有啥用</h2><p>这就不用说咯，Qt Creator编译项目其实就是几个过程</p>
+<ol>
+<li>首先qmake根据项目的.pro文件先生成makefile</li>
+<li>使用make根据makefile进行相应的编译和链接工作</li>
+</ol>
+<h2 id="怎么用">怎么用</h2><ol>
+<li>如下图，点击项目（当然你要先打开一个项目，每个项目都有独立的参数设置）<br><img src="http://ww3.sinaimg.cn/large/ec07ab8bgw1ev8bzjar8tj202t082mx6.jpg" alt=""></li>
+<li>打开后会看到下图这个样子<br><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1ev8c38xpoij20o406maar.jpg" alt=""></li>
+<li>在Make参数那一栏填上-j 4</li>
+</ol>
+<p>make的帮助手册是这样写的：<br>-j [N], —jobs[=N]          同时允许 N 个任务；无参数表明允许无限个任务。<br>通常情况下，它默认只是一个任务在跑</p>
+<p>那个jobs也要看你机器的，不是越多越好啦，一个四核的CPU你给分配400个任务那不是运桔(粤语哈哈)吗</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/开发/">开发</a>►<a class="article-category-link" href="/categories/开发/Qt/">Qt</a>►<a class="article-category-link" href="/categories/开发/Qt/笔记/">笔记</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/qt/">qt</a><a href="/tags/技巧/">技巧</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/08/18/Creator编译更快/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/18/Creator编译更快/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
     <article class="post-expand post" itemprop="articleBody"> 
         <header class="article-info clearfix">
   <h1 itemprop="name">
@@ -410,15 +484,15 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/开发/Qt/" title="Qt">Qt<sup>2</sup></a></li>
+			<li><a href="/categories/开发/Qt/" title="Qt">Qt<sup>3</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/开发/" title="开发">开发<sup>2</sup></a></li>
+			<li><a href="/categories/开发/" title="开发">开发<sup>3</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/开发/Qt/笔记/" title="笔记">笔记<sup>2</sup></a></li>
+			<li><a href="/categories/开发/Qt/笔记/" title="笔记">笔记<sup>3</sup></a></li>
 		  
 		
 		  
@@ -435,11 +509,11 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>3</sup></a></li>
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>4</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/qt/" title="qt">qt<sup>2</sup></a></li>
+				<li><a href="/tags/qt/" title="qt">qt<sup>3</sup></a></li>
 			
 		
 			
@@ -448,6 +522,10 @@
 		
 			
 				<li><a href="/tags/前端/" title="前端">前端<sup>2</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/技巧/" title="技巧">技巧<sup>1</sup></a></li>
 			
 		
 			

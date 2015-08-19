@@ -4,32 +4,55 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Ubuntu单网卡绑定多IP | 写代码的火柴</title>
+    <title>Qt Creator编译更快 | 写代码的火柴</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Match">
     
 
     
-    <meta name="description" content="原因之前一直无奈于ubuntu下用局域网时不能连接到外网,我看了下linuxdeepin,它的能同时用那ubuntu肯定也能.于是网上找到了资料：常常我们有需要一个网卡象windows一样设置多个IP.
-实现1$ sudo gedit /etc/network/interfaces
-照上边eth0添加eth0:0
-当然，有些信息没有的你不一定非要加上，重点是auto eth0:0那部分内容，网段什">
+    <meta name="description" content="有啥用这就不用说咯，Qt Creator编译项目其实就是几个过程
+
+首先qmake根据项目的.pro文件先生成makefile
+使用make根据makefile进行相应的编译和链接工作
+
+怎么用
+如下图，点击项目（当然你要先打开一个项目，每个项目都有独立的参数设置）
+打开后会看到下图这个样子
+在Make参数那一栏填上-j 4
+
+make的帮助手册是这样写的：-j [N], —jobs[=N]">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Ubuntu单网卡绑定多IP">
-<meta property="og:url" content="http://wanqingyang.me/2013/05/15/Ubuntu单网卡绑定多IP/index.html">
+<meta property="og:title" content="Qt Creator编译更快">
+<meta property="og:url" content="http://wanqingyang.me/2015/08/18/Creator编译更快/index.html">
 <meta property="og:site_name" content="写代码的火柴">
-<meta property="og:description" content="原因之前一直无奈于ubuntu下用局域网时不能连接到外网,我看了下linuxdeepin,它的能同时用那ubuntu肯定也能.于是网上找到了资料：常常我们有需要一个网卡象windows一样设置多个IP.
-实现1$ sudo gedit /etc/network/interfaces
-照上边eth0添加eth0:0
-当然，有些信息没有的你不一定非要加上，重点是auto eth0:0那部分内容，网段什">
-<meta property="og:updated_time" content="2015-07-29T17:46:34.000Z">
+<meta property="og:description" content="有啥用这就不用说咯，Qt Creator编译项目其实就是几个过程
+
+首先qmake根据项目的.pro文件先生成makefile
+使用make根据makefile进行相应的编译和链接工作
+
+怎么用
+如下图，点击项目（当然你要先打开一个项目，每个项目都有独立的参数设置）
+打开后会看到下图这个样子
+在Make参数那一栏填上-j 4
+
+make的帮助手册是这样写的：-j [N], —jobs[=N]">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/ec07ab8bgw1ev8bzjar8tj202t082mx6.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1ev8c38xpoij20o406maar.jpg">
+<meta property="og:updated_time" content="2015-08-19T15:41:02.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ubuntu单网卡绑定多IP">
-<meta name="twitter:description" content="原因之前一直无奈于ubuntu下用局域网时不能连接到外网,我看了下linuxdeepin,它的能同时用那ubuntu肯定也能.于是网上找到了资料：常常我们有需要一个网卡象windows一样设置多个IP.
-实现1$ sudo gedit /etc/network/interfaces
-照上边eth0添加eth0:0
-当然，有些信息没有的你不一定非要加上，重点是auto eth0:0那部分内容，网段什">
+<meta name="twitter:title" content="Qt Creator编译更快">
+<meta name="twitter:description" content="有啥用这就不用说咯，Qt Creator编译项目其实就是几个过程
+
+首先qmake根据项目的.pro文件先生成makefile
+使用make根据makefile进行相应的编译和链接工作
+
+怎么用
+如下图，点击项目（当然你要先打开一个项目，每个项目都有独立的参数设置）
+打开后会看到下图这个样子
+在Make参数那一栏填上-j 4
+
+make的帮助手册是这样写的：-j [N], —jobs[=N]">
 
     
     <link rel="alternative" href="/atom.xml" title="写代码的火柴" type="application/atom+xml">
@@ -79,20 +102,20 @@
 </div>
     </header>
     <div id="container">
-      <div id="main" class="post" itemscope itemprop="blogPost">
+      <div id="main" class="让qt" itemscope itemprop="blogPost">
   
 	<article itemprop="articleBody"> 
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2013/05/15/Ubuntu单网卡绑定多IP/" title="Ubuntu单网卡绑定多IP" itemprop="url">Ubuntu单网卡绑定多IP</a>
+      <a href="/2015/08/18/Creator编译更快/" title="Qt Creator编译更快" itemprop="url">Qt Creator编译更快</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Match" target="_blank" itemprop="author">Match</a>
 		
   <p class="article-time">
-    <time datetime="2013-05-15T03:45:26.000Z" itemprop="datePublished"> 发表于 2013-05-15</time>
+    <time datetime="2015-08-18T15:52:51.000Z" itemprop="datePublished"> 发表于 2015-08-18</time>
     
   </p>
 </header>
@@ -101,15 +124,22 @@
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">2.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后期"><span class="toc-number">3.</span> <span class="toc-text">后期</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#有啥用"><span class="toc-number">1.</span> <span class="toc-text">有啥用</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#怎么用"><span class="toc-number">2.</span> <span class="toc-text">怎么用</span></a></li></ol>
 		
 		</div>
 		
-		<h3 id="原因">原因</h3><p>之前一直无奈于ubuntu下用局域网时不能连接到外网,<br>我看了下linuxdeepin,它的能同时用那ubuntu肯定也能.<br>于是网上找到了资料：<br>常常我们有需要一个网卡象windows一样设置多个IP.</p>
-<h3 id="实现">实现</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ sudo gedit /etc/network/interfaces</span><br></pre></td></tr></table></figure>
-<p>照上边eth0添加eth0:0</p>
-<p>当然，有些信息没有的你不一定非要加上，重点是auto eth0:0那部分内容，网段什么的根据你自己的改<br>我的配置如下：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">auto eth0</span><br><span class="line">iface eth0 inet static</span><br><span class="line">name Ethernet Lan card</span><br><span class="line">address <span class="number">192.168</span>.<span class="number">1.1</span></span><br><span class="line">netmask <span class="number">255.255</span>.<span class="number">255.0</span></span><br><span class="line">network <span class="number">192.168</span>.<span class="number">1.0</span></span><br><span class="line">broadcast <span class="number">192.168</span>.<span class="number">1.255</span></span><br><span class="line">gateway <span class="number">192.168</span>.<span class="number">1.1</span></span><br><span class="line"></span><br><span class="line">auto eth0:<span class="number">0</span></span><br><span class="line">iface eth0:<span class="number">0</span> inet static</span><br><span class="line">name Ethernet</span><br><span class="line"></span><br><span class="line">address <span class="number">192.168</span>.<span class="number">1.2</span></span><br><span class="line">netmask <span class="number">255.255</span>.<span class="number">255.0</span></span><br><span class="line">network <span class="number">192.168</span>.<span class="number">1.0</span></span><br><span class="line">broadcast <span class="number">192.168</span>.<span class="number">1.255</span></span><br><span class="line">gateway <span class="number">192.168</span>.<span class="number">1.1</span></span><br></pre></td></tr></table></figure></p>
-<h3 id="后期">后期</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="variable">$sudo</span> service network-manager restart</span><br></pre></td></tr></table></figure>
+		<h2 id="有啥用">有啥用</h2><p>这就不用说咯，Qt Creator编译项目其实就是几个过程</p>
+<ol>
+<li>首先qmake根据项目的.pro文件先生成makefile</li>
+<li>使用make根据makefile进行相应的编译和链接工作</li>
+</ol>
+<h2 id="怎么用">怎么用</h2><ol>
+<li>如下图，点击项目（当然你要先打开一个项目，每个项目都有独立的参数设置）<br><img src="http://ww3.sinaimg.cn/large/ec07ab8bgw1ev8bzjar8tj202t082mx6.jpg" alt=""></li>
+<li>打开后会看到下图这个样子<br><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1ev8c38xpoij20o406maar.jpg" alt=""></li>
+<li>在Make参数那一栏填上-j 4</li>
+</ol>
+<p>make的帮助手册是这样写的：<br>-j [N], —jobs[=N]          同时允许 N 个任务；无参数表明允许无限个任务。<br>通常情况下，它默认只是一个任务在跑</p>
+<p>那个jobs也要看你机器的，不是越多越好啦，一个四核的CPU你给分配400个任务那不是运桔(粤语哈哈)吗</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -117,13 +147,13 @@
 
 <div class="article-categories">
   <span></span>
-  <a class="article-category-link" href="/categories/笔记/">笔记</a>
+  <a class="article-category-link" href="/categories/开发/">开发</a>►<a class="article-category-link" href="/categories/开发/Qt/">Qt</a>►<a class="article-category-link" href="/categories/开发/Qt/笔记/">笔记</a>
 </div>
 
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/系统/">系统</a>
+  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/qt/">qt</a><a href="/tags/技巧/">技巧</a>
   </div>
 
 </div>
@@ -132,7 +162,7 @@
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://wanqingyang.me/2013/05/15/Ubuntu单网卡绑定多IP/" data-title="Ubuntu单网卡绑定多IP | 写代码的火柴" data-tsina="MatchYangWanQing" class="share clearfix">
+	  <div data-url="http://wanqingyang.me/2015/08/18/Creator编译更快/" data-title="Qt Creator编译更快 | 写代码的火柴" data-tsina="MatchYangWanQing" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -145,32 +175,25 @@
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/08/09/Qt-Style-Sheets-简介/" title="Qt Style Sheets--简介">
-  <strong>上一篇：</strong><br/>
-  <span>
-  Qt Style Sheets--简介</span>
+
+<div class="next">
+<a href="/2015/08/10/Qt-Style-Sheets-语法/"  title=" Qt Style Sheets--语法 ">
+ <strong>下一篇：</strong><br/> 
+ <span> Qt Style Sheets--语法 
+</span>
 </a>
 </div>
-
 
 </nav>
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2013/05/15/Ubuntu单网卡绑定多IP/" data-title="Ubuntu单网卡绑定多IP" data-url="http://wanqingyang.me/2013/05/15/Ubuntu单网卡绑定多IP/"></div>
+	<div class="ds-thread" data-thread-key="2015/08/18/Creator编译更快/" data-title="Qt Creator编译更快" data-url="http://wanqingyang.me/2015/08/18/Creator编译更快/"></div>
 </section>
 
 
 </div>  
       <div class="openaside"><a class="navbutton" href="#" title="显示侧边栏"></a></div>
-
-  <div id="toc" class="toc-aside">
-  <strong class="toc-title">文章目录</strong>
- 
- <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#原因"><span class="toc-number">1.</span> <span class="toc-text">原因</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#实现"><span class="toc-number">2.</span> <span class="toc-text">实现</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#后期"><span class="toc-number">3.</span> <span class="toc-text">后期</span></a></li></ol>
- 
-  </div>
 
 <div id="asidepart">
 <div class="closeaside"><a class="closebutton" href="#" title="隐藏侧边栏"></a></div>
@@ -397,55 +420,6 @@ $(document).ready(function(){
 </script>
 
 
-<script type="text/javascript">
-$(document).ready(function(){ 
-  var $this = $('.share'),
-      url = $this.attr('data-url'),
-      encodedUrl = encodeURIComponent(url),
-      title = $this.attr('data-title'),
-      tsina = $this.attr('data-tsina'),
-      description = $this.attr('description');
-  var html = [
-  '<div class="hoverqrcode clearfix"></div>',
-  '<a class="overlay" id="qrcode"></a>',
-  '<a href="https://www.facebook.com/sharer.php?u=' + encodedUrl + '" class="article-share-facebook" target="_blank" title="Facebook"></a>',
-  '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="article-share-twitter" target="_blank" title="Twitter"></a>',
-  '<a href="#qrcode" class="article-share-qrcode" title="微信"></a>',
-  '<a href="http://widget.renren.com/dialog/share?resourceUrl=' + encodedUrl + '&srcUrl=' + encodedUrl + '&title=' + title +'" class="article-share-renren" target="_blank" title="人人"></a>',
-  '<a href="http://service.weibo.com/share/share.php?title='+title+'&url='+encodedUrl +'&ralateUid='+ tsina +'&searchPic=true&style=number' +'" class="article-share-weibo" target="_blank" title="微博"></a>',
-  '<span title="Share to"></span>'
-  ].join('');
-  $this.append(html);
-
-  $('.hoverqrcode').hide();
-
-  var myWidth = 0;
-  function updatehoverqrcode(){
-    if( typeof( window.innerWidth ) == 'number' ) {
-      myWidth = window.innerWidth;
-    } else if( document.documentElement && document.documentElement.clientWidth) {
-      myWidth = document.documentElement.clientWidth;
-    };
-    var qrsize = myWidth > 1024 ? 200:100;
-    var options = {render: 'image', size: qrsize, fill: '#2ca6cb', text: url, radius: 0.5, quiet: 1};
-    var p = $('.article-share-qrcode').position();
-    $('.hoverqrcode').empty().css('width', qrsize).css('height', qrsize)
-                          .css('left', p.left-qrsize/2+20).css('top', p.top-qrsize-10)
-                          .qrcode(options);
-  };
-  $(window).resize(function(){
-    $('.hoverqrcode').hide();
-  });
-  $('.article-share-qrcode').click(function(){
-    updatehoverqrcode();
-    $('.hoverqrcode').toggle();
-  });
-  $('.article-share-qrcode').hover(function(){}, function(){
-      $('.hoverqrcode').hide();
-  });
-});   
-</script>
-
 
 
 <script type="text/javascript">
@@ -517,4 +491,4 @@ $(document).ready(function(){
 <!-- Tiny_search End -->
 
   </body>
-</html>
+ </html>
