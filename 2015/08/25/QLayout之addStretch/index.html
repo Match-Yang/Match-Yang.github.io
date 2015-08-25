@@ -4,37 +4,26 @@
 <head>
   <meta charset="UTF-8">
   
-    <title>Qt Style Sheets--简介 | 写代码的火柴</title>
+    <title>QLayout之addStretch | 写代码的火柴</title>
     <meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
     
     <meta name="author" content="Match">
     
 
     
-    <meta name="description" content="(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。Qt样式表的概念、术语、语法都深受HTML启发Cascading Style Sheets (CSS)但是却适合于widgets的世界。
-
-专题
-概述
-Qt设">
+    <meta name="description" content="弹簧QLayout的addStretch我们可以形象的理解成添加弹簧如下所示，三个QPushButton分别放在一个Layout中，并且Layout的底部都有一个弹簧把他们往上顶：上图是一个.ui文件，用代码重新写个简单的，如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344#ifnde">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Qt Style Sheets--简介">
-<meta property="og:url" content="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-简介/index.html">
+<meta property="og:title" content="QLayout之addStretch">
+<meta property="og:url" content="http://wanqingyang.me/2015/08/25/QLayout之addStretch/index.html">
 <meta property="og:site_name" content="写代码的火柴">
-<meta property="og:description" content="(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。Qt样式表的概念、术语、语法都深受HTML启发Cascading Style Sheets (CSS)但是却适合于widgets的世界。
-
-专题
-概述
-Qt设">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtmsduhij20or0dj427.jpg">
-<meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtrjhm8aj20oo0dgwhc.jpg">
-<meta property="og:updated_time" content="2015-08-16T05:10:22.000Z">
+<meta property="og:description" content="弹簧QLayout的addStretch我们可以形象的理解成添加弹簧如下所示，三个QPushButton分别放在一个Layout中，并且Layout的底部都有一个弹簧把他们往上顶：上图是一个.ui文件，用代码重新写个简单的，如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344#ifnde">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/ec07ab8bgw1evf7pzj8t0j20ay08caau.jpg">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/ec07ab8bgw1evf7smkppcj208f0983yk.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/ec07ab8bgw1evf8acms9ij208g09c0su.jpg">
+<meta property="og:updated_time" content="2015-08-25T14:30:34.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Qt Style Sheets--简介">
-<meta name="twitter:description" content="(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。Qt样式表的概念、术语、语法都深受HTML启发Cascading Style Sheets (CSS)但是却适合于widgets的世界。
-
-专题
-概述
-Qt设">
+<meta name="twitter:title" content="QLayout之addStretch">
+<meta name="twitter:description" content="弹簧QLayout的addStretch我们可以形象的理解成添加弹簧如下所示，三个QPushButton分别放在一个Layout中，并且Layout的底部都有一个弹簧把他们往上顶：上图是一个.ui文件，用代码重新写个简单的，如下：1234567891011121314151617181920212223242526272829303132333435363738394041424344#ifnde">
 
     
     <link rel="alternative" href="/atom.xml" title="写代码的火柴" type="application/atom+xml">
@@ -90,14 +79,14 @@ Qt设">
 		<header class="article-info clearfix">
   <h1 itemprop="name">
     
-      <a href="/2015/08/09/Qt-Style-Sheets-简介/" title="Qt Style Sheets--简介" itemprop="url">Qt Style Sheets--简介</a>
+      <a href="/2015/08/25/QLayout之addStretch/" title="QLayout之addStretch" itemprop="url">QLayout之addStretch</a>
   </h1>
   <p class="article-author">By
        
 		<a href="/about" title="Match" target="_blank" itemprop="author">Match</a>
 		
   <p class="article-time">
-    <time datetime="2015-08-09T15:45:42.000Z" itemprop="datePublished"> 发表于 2015-08-09</time>
+    <time datetime="2015-08-25T13:54:27.000Z" itemprop="datePublished"> 发表于 2015-08-25</time>
     
   </p>
 </header>
@@ -106,29 +95,16 @@ Qt设">
 		<div id="toc" class="toc-article">
 			<strong class="toc-title">文章目录</strong>
 		
-			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#专题"><span class="toc-number">1.</span> <span class="toc-text">专题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">2.</span> <span class="toc-text">概述</span></a></li></ol>
+			<ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#弹簧"><span class="toc-number">1.</span> <span class="toc-text">弹簧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">3.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决"><span class="toc-number">4.</span> <span class="toc-text">解决</span></a></li></ol>
 		
 		</div>
 		
-		<p>(本文翻译自Qt SDK帮助手册，水平有限，多多包含，不是完全的直译)<br>Qt样式表是一个功能强大的机制，它允许您自定义部件的外观，这是除了子类化QStyle来自定义部件外观的另一种机制（其实Qt样式表跟QStyle有很大的关系，以后慢慢了解）。<br>Qt样式表的概念、术语、语法都深受HTML启发Cascading Style Sheets (CSS)但是却适合于widgets的世界。</p>
-<hr>
-<h2 id="专题">专题</h2><ul>
-<li>概述</li>
-<li>Qt设计师集成开发工具（以后不对这个模块做描述，大家有兴趣的自己看看帮助文档）</li>
-<li>使用样式表自定义Qt Widgets</li>
-<li>Qt样式表标准</li>
-<li>Qt样式表例子</li>
-</ul>
-<hr>
-<h2 id="概述">概述</h2><p>&emsp;&emsp;样式表是一种能使用 <strong>QApplication::setStyleSheet()</strong>设置到整个应用程序或者使用<strong>QWidget::setStyleSheet()</strong>设置到某个特定的部件（包括其子部件）的文本规范。如果在几个不同的级别上设置了不同的样式表，Qt会同时应用这几个级别上设置的所有样式表，这就是所谓的级联。<br>&emsp;&emsp;举个例子，下面的样式表语句规定所有的<strong>QLineEdit</strong>都应该将黄色作为它们的背景样色，同样的，所有的<strong>QCheckBox</strong>都应该将红色作为该部件上字体的颜色:</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">QLineEdit</span> <span class="rules">&#123; <span class="rule"><span class="attribute">background</span>:<span class="value"> yellow &#125;</span><br><span class="line">QCheckBox &#123; color: red &#125;</span></span></span></span><br></pre></td></tr></table></figure>
-<p>&emsp;&emsp;对于这种定制，样式表比<strong>QPalette</strong>要强大得多。举个例子，通过设置<strong>QPalette::Button</strong>的<strong>role</strong>成红色以获得一个红色的按钮看似非常有诱惑力，然而,这并不能保证适用于所有风格,因为样式作者会受限于不同平台的指导方针和(在 Windows XP 和 Mac OS X)本地的主题引擎。<br>&emsp;&emsp;此外，样式表可以在你不子类化<strong>QStyle</strong>的情况下也能为你的应用程序提供独特的观感。举个例子，你可以为单选框和复选框指定任意的图片以使它们更加的突出。使用这种技术，还可以实现更小的定制，但这通常需要子类化一下style类，比如style hint。下面展示的两个独特的样式表，你可以尝试和修改。</p>
-<p><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtmsduhij20or0dj427.jpg" alt=""><br><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1euwtrjhm8aj20oo0dgwhc.jpg" alt=""></p>
-<p>&emsp;&emsp;样式表让你可以执行任何<strong>QPalette</strong>难以做到甚至不能做到的各种自定义操作。 如果你想让必填字段显示黄色的背景色、让退出按钮等破坏性的按钮显示红色的文字有或者想弄个花里胡哨的复选框，那么样式表都能满足你。</p>
-<p>&emsp;&emsp;样式表应用在所有部件的顶层，这意味着你的应用程序看起来会像本地的样式，但是任何样式表定义都会被考虑。与palette那种不靠谱相反，样式表能保证：如果你把<strong>QPushButton</strong>的背景色设置成了红色，你可以确定在所有平台和主题下它的背景颜色都是红色的。此外，Qt 设计师工具提供了样式表的集成，可以更直观的看到样式表的效果。</p>
-<p>&emsp;&emsp;当样式表激活时，由<strong>QWidget::style()</strong>返回的QStyle其实是“样式表”的包装而不是平台指定的样式。“样式表”的包装保证样式表会优先使用，否则在进行绘制操作时，平台指定的样式将会生效。（例子：Windows XP上使用QWindowsXPStyle）</p>
-<hr>
-<p>版权声明：<a href="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-%E7%AE%80%E4%BB%8B/">本文</a>为博主原创文章，欢迎转载，转载请注明出处</p>
+		<h2 id="弹簧">弹簧</h2><p>QLayout的addStretch我们可以形象的理解成添加弹簧<br>如下所示，三个QPushButton分别放在一个Layout中，并且Layout的底部都有一个弹簧把他们往上顶：<br><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1evf7pzj8t0j20ay08caau.jpg" alt=""><br>上图是一个.ui文件，用代码重新写个简单的，如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#ifndef MAINWIDGET_H</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAINWIDGET_H</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QWidget&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QHBoxLayout&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QVBoxLayout&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QPushButton&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> ButtonItem : <span class="keyword">public</span> QWidget</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ButtonItem(QWidget *parent = <span class="number">0</span>) : QWidget(parent)</span><br><span class="line">    &#123;</span><br><span class="line">        QVBoxLayout *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</span><br><span class="line">        layout-&gt;setContentsMargins(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        QPushButton *b = <span class="keyword">new</span> QPushButton(<span class="string">"Test Button"</span>);</span><br><span class="line">        b-&gt;setFixedHeight(<span class="number">20</span>);</span><br><span class="line">        layout-&gt;addWidget(b);</span><br><span class="line"></span><br><span class="line">        layout-&gt;addStretch();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> MainWidget : <span class="keyword">public</span> QWidget</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    MainWidget(QWidget *parent = <span class="number">0</span>) : QWidget(parent)</span><br><span class="line">    &#123;</span><br><span class="line">        setFixedSize(<span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line">        QVBoxLayout *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</span><br><span class="line">        layout-&gt;setContentsMargins(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">        layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">        layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line"></span><br><span class="line">        layout-&gt;addStretch();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span> <span class="comment">// MAINWIDGET_H</span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="问题">问题</h2><p>将三个小Layout放在一个大Layout中，这时，坑爹的事情发生了，最外面那根弹簧并没有什么卵用<br>三个小弹簧平均撑开了：<br><img src="http://ww4.sinaimg.cn/large/ec07ab8bgw1evf7smkppcj208f0983yk.jpg" alt=""></p>
+<h2 id="分析">分析</h2><p>出现这个问题的原因就在于权重的问题，就是里面的三根弹簧跟最外面的弹簧到底谁优先级更高，通俗点就是，谁的弹力更牛叉（高中老师一定会跳出来跟扯一堆弹性势能的问题的）<br>而解决这个问题很简单，就是设置权重啦，最外层的弹簧给它设置更高的权重就行<br>根据帮助文档:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> QBoxLayout::addStretch(<span class="keyword">int</span> stretch = <span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<p>我们知道默认的权重就是0</p>
+<h2 id="解决">解决</h2><p>如果你想要最外面的弹簧能把三个小东西顶上去的话，按下面的改就行：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">      layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">      layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">      layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line"></span><br><span class="line">      layout-&gt;addStretch(<span class="number">1</span>);<span class="comment">//注意把最外层的弹簧权重改成1</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>最终效果：<br><img src="http://ww1.sinaimg.cn/large/ec07ab8bgw1evf8acms9ij208g09c0su.jpg" alt=""><br>当然，权重值不是固定的，具体看嵌套几层，自己瞄一瞄就知道了<br>本例子中那几个里层的小Layout是没有什么卵用的，但实际上这样嵌套的用法很多</p>
   
 	</div>
 		<footer class="article-footer clearfix">
@@ -142,7 +118,7 @@ Qt设">
 
   <div class="article-tags">
   
-  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/qss/">qss</a><a href="/tags/qt/">qt</a><a href="/tags/前端/">前端</a>
+  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/qt/">qt</a><a href="/tags/前端/">前端</a>
   </div>
 
 </div>
@@ -151,7 +127,7 @@ Qt设">
 
 	<div class="article-share" id="share">
 	
-	  <div data-url="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-简介/" data-title="Qt Style Sheets--简介 | 写代码的火柴" data-tsina="MatchYangWanQing" class="share clearfix">
+	  <div data-url="http://wanqingyang.me/2015/08/25/QLayout之addStretch/" data-title="QLayout之addStretch | 写代码的火柴" data-tsina="MatchYangWanQing" class="share clearfix">
 	  </div>
 	
 	</div>
@@ -164,19 +140,11 @@ Qt设">
 	
 <nav class="article-nav clearfix">
  
- <div class="prev" >
- <a href="/2015/08/10/Qt-Style-Sheets-语法/" title=" Qt Style Sheets--语法 ">
-  <strong>上一篇：</strong><br/>
-  <span>
-   Qt Style Sheets--语法 </span>
-</a>
-</div>
-
 
 <div class="next">
-<a href="/2013/05/15/Ubuntu单网卡绑定多IP/"  title="Ubuntu单网卡绑定多IP">
+<a href="/2015/08/18/Creator编译更快/"  title="Qt Creator编译更快">
  <strong>下一篇：</strong><br/> 
- <span>Ubuntu单网卡绑定多IP
+ <span>Qt Creator编译更快
 </span>
 </a>
 </div>
@@ -185,7 +153,7 @@ Qt设">
 
 	
 <section id="comments" class="comment">
-	<div class="ds-thread" data-thread-key="2015/08/09/Qt-Style-Sheets-简介/" data-title="Qt Style Sheets--简介" data-url="http://wanqingyang.me/2015/08/09/Qt-Style-Sheets-简介/"></div>
+	<div class="ds-thread" data-thread-key="2015/08/25/QLayout之addStretch/" data-title="QLayout之addStretch" data-url="http://wanqingyang.me/2015/08/25/QLayout之addStretch/"></div>
 </section>
 
 
@@ -195,7 +163,7 @@ Qt设">
   <div id="toc" class="toc-aside">
   <strong class="toc-title">文章目录</strong>
  
- <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#专题"><span class="toc-number">1.</span> <span class="toc-text">专题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#概述"><span class="toc-number">2.</span> <span class="toc-text">概述</span></a></li></ol>
+ <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#弹簧"><span class="toc-number">1.</span> <span class="toc-text">弹簧</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#问题"><span class="toc-number">2.</span> <span class="toc-text">问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分析"><span class="toc-number">3.</span> <span class="toc-text">分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#解决"><span class="toc-number">4.</span> <span class="toc-text">解决</span></a></li></ol>
  
   </div>
 

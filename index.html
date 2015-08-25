@@ -73,6 +73,74 @@
 
    
     
+    <article class="post-expand post" itemprop="articleBody"> 
+        <header class="article-info clearfix">
+  <h1 itemprop="name">
+    
+      <a href="/2015/08/25/QLayout之addStretch/" title="QLayout之addStretch" itemprop="url">QLayout之addStretch</a>
+  </h1>
+  <p class="article-author">By
+       
+		<a href="/about" title="Match" target="_blank" itemprop="author">Match</a>
+		
+  <p class="article-time">
+    <time datetime="2015-08-25T13:54:27.000Z" itemprop="datePublished"> 发表于 2015-08-25</time>
+    
+  </p>
+</header>
+    <div class="article-content">
+        
+        <h2 id="弹簧">弹簧</h2><p>QLayout的addStretch我们可以形象的理解成添加弹簧<br>如下所示，三个QPushButton分别放在一个Layout中，并且Layout的底部都有一个弹簧把他们往上顶：<br><img src="http://ww2.sinaimg.cn/large/ec07ab8bgw1evf7pzj8t0j20ay08caau.jpg" alt=""><br>上图是一个.ui文件，用代码重新写个简单的，如下：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#ifndef MAINWIDGET_H</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">define</span> MAINWIDGET_H</span></span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QWidget&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QHBoxLayout&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QVBoxLayout&gt;</span></span><br><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;QPushButton&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> ButtonItem : <span class="keyword">public</span> QWidget</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    ButtonItem(QWidget *parent = <span class="number">0</span>) : QWidget(parent)</span><br><span class="line">    &#123;</span><br><span class="line">        QVBoxLayout *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</span><br><span class="line">        layout-&gt;setContentsMargins(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line">        QPushButton *b = <span class="keyword">new</span> QPushButton(<span class="string">"Test Button"</span>);</span><br><span class="line">        b-&gt;setFixedHeight(<span class="number">20</span>);</span><br><span class="line">        layout-&gt;addWidget(b);</span><br><span class="line"></span><br><span class="line">        layout-&gt;addStretch();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="keyword">class</span> MainWidget : <span class="keyword">public</span> QWidget</span><br><span class="line">&#123;</span><br><span class="line">    Q_OBJECT</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span>:</span><br><span class="line">    MainWidget(QWidget *parent = <span class="number">0</span>) : QWidget(parent)</span><br><span class="line">    &#123;</span><br><span class="line">        setFixedSize(<span class="number">300</span>, <span class="number">300</span>);</span><br><span class="line">        QVBoxLayout *layout = <span class="keyword">new</span> QVBoxLayout(<span class="keyword">this</span>);</span><br><span class="line">        layout-&gt;setContentsMargins(<span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">        layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">        layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">        layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line"></span><br><span class="line">        layout-&gt;addStretch();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="preprocessor">#<span class="keyword">endif</span> <span class="comment">// MAINWIDGET_H</span></span></span><br></pre></td></tr></table></figure></p>
+<h2 id="问题">问题</h2><p>将三个小Layout放在一个大Layout中，这时，坑爹的事情发生了，最外面那根弹簧并没有什么卵用<br>三个小弹簧平均撑开了：<br><img src="http://ww4.sinaimg.cn/large/ec07ab8bgw1evf7smkppcj208f0983yk.jpg" alt=""></p>
+<h2 id="分析">分析</h2><p>出现这个问题的原因就在于权重的问题，就是里面的三根弹簧跟最外面的弹簧到底谁优先级更高，通俗点就是，谁的弹力更牛叉（高中老师一定会跳出来跟扯一堆弹性势能的问题的）<br>而解决这个问题很简单，就是设置权重啦，最外层的弹簧给它设置更高的权重就行<br>根据帮助文档:<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">void</span> QBoxLayout::addStretch(<span class="keyword">int</span> stretch = <span class="number">0</span>)</span><br></pre></td></tr></table></figure></p>
+<p>我们知道默认的权重就是0</p>
+<h2 id="解决">解决</h2><p>如果你想要最外面的弹簧能把三个小东西顶上去的话，按下面的改就行：<br><figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">...</span><br><span class="line">      layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">      layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line">      layout-&gt;addWidget(<span class="keyword">new</span> ButtonItem);</span><br><span class="line"></span><br><span class="line">      layout-&gt;addStretch(<span class="number">1</span>);<span class="comment">//注意把最外层的弹簧权重改成1</span></span><br><span class="line">...</span><br></pre></td></tr></table></figure></p>
+<p>最终效果：<br><img src="http://ww1.sinaimg.cn/large/ec07ab8bgw1evf8acms9ij208g09c0su.jpg" alt=""><br>当然，权重值不是固定的，具体看嵌套几层，自己瞄一瞄就知道了<br>本例子中那几个里层的小Layout是没有什么卵用的，但实际上这样嵌套的用法很多</p>
+
+        
+        
+        <p class="article-more-link">
+          
+       </p>
+    </div>
+    <footer class="article-footer clearfix">
+<div class="article-catetags">
+
+<div class="article-categories">
+  <span></span>
+  <a class="article-category-link" href="/categories/开发/">开发</a>►<a class="article-category-link" href="/categories/开发/Qt/">Qt</a>►<a class="article-category-link" href="/categories/开发/Qt/笔记/">笔记</a>
+</div>
+
+
+  <div class="article-tags">
+  
+  <span></span> <a href="/tags/Linux/">Linux</a><a href="/tags/qt/">qt</a><a href="/tags/前端/">前端</a>
+  </div>
+
+</div>
+
+
+
+
+<div class="comments-count">
+	
+	  	<span></span>
+		<a href="/2015/08/25/QLayout之addStretch/#comments" class="ds-thread-count comments-count-link" data-thread-key="2015/08/25/QLayout之addStretch/" data-count-type="comments">&nbsp;</a>
+	
+</div>
+
+</footer>
+
+
+    </article>
+
+
+
+
+
+
+   
+    
     <article class="post-expand 让qt" itemprop="articleBody"> 
         <header class="article-info clearfix">
   <h1 itemprop="name">
@@ -484,15 +552,15 @@
 		<ul>
 		
 		  
-			<li><a href="/categories/开发/Qt/" title="Qt">Qt<sup>3</sup></a></li>
+			<li><a href="/categories/开发/Qt/" title="Qt">Qt<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/开发/" title="开发">开发<sup>3</sup></a></li>
+			<li><a href="/categories/开发/" title="开发">开发<sup>4</sup></a></li>
 		  
 		
 		  
-			<li><a href="/categories/开发/Qt/笔记/" title="笔记">笔记<sup>3</sup></a></li>
+			<li><a href="/categories/开发/Qt/笔记/" title="笔记">笔记<sup>4</sup></a></li>
 		  
 		
 		  
@@ -509,19 +577,19 @@
 		<ul class="clearfix">
 		
 			
-				<li><a href="/tags/Linux/" title="Linux">Linux<sup>4</sup></a></li>
+				<li><a href="/tags/Linux/" title="Linux">Linux<sup>5</sup></a></li>
 			
 		
 			
-				<li><a href="/tags/qt/" title="qt">qt<sup>3</sup></a></li>
+				<li><a href="/tags/qt/" title="qt">qt<sup>4</sup></a></li>
+			
+		
+			
+				<li><a href="/tags/前端/" title="前端">前端<sup>3</sup></a></li>
 			
 		
 			
 				<li><a href="/tags/qss/" title="qss">qss<sup>2</sup></a></li>
-			
-		
-			
-				<li><a href="/tags/前端/" title="前端">前端<sup>2</sup></a></li>
 			
 		
 			
